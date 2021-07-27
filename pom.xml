@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>RatCheese</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+        <!--        <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>-->
+        <encoding>UTF-8</encoding>
+        <scala.version>2.11.8</scala.version>
+        <scala.compat.version>2.11</scala.compat.version>
+        <spark.version>2.2.0.cloudera3</spark.version>
+        <table.exporter.common.version>3.0.3</table.exporter.common.version>
+        <sonar.language>scala</sonar.language>
+        <snappy.version>1.1.7.2</snappy.version>
+        <scalatest.version>3.0.5</scalatest.version>
+        <spark.testing.version>4.0.3</spark.testing.version>
+        <spark.validations>1.0.10</spark.validations>
+        <common-transformations.version>1.0.4</common-transformations.version>
+        <scoverage.plugin.version>1.4.0-RC1</scoverage.plugin.version>
+        <sonar.scoverage.reportPath>target/scoverage.xml</sonar.scoverage.reportPath>
+        <skipTests>true</skipTests> <!-- Test will be executed by scoverage plugin -->
+        <sonar.findbugs.excludesFilters>findbugs-filters.xml</sonar.findbugs.excludesFilters>
+        <spark.validation.version>1.0.10</spark.validation.version>
+        <slf4j.api.version>1.7.25</slf4j.api.version>
+        <spark.csv.version>1.5.0</spark.csv.version>
+        <log4j.api.scala.version>11.0</log4j.api.scala.version>
+
+    </properties>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+
+        <!--    <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-library</artifactId>
+                <version>${scala.version}</version>
+            </dependency>-->
+
+
+
+        <!--    <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-hive_${scala.compat.version}</artifactId>
+                <version>${spark.version}</version>
+                <scope>provided</scope>
+            </dependency>-->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.api.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api-scala_${scala.compat.version}</artifactId>
+            <version>${log4j.api.scala.version}</version>
+        </dependency>
+
+        <!-- table exporter-->
+
+
+        <!-- Test -->
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_${scala.compat.version}</artifactId>
+            <version>${scalatest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>${snappy.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--    Test fix : error in your runpath. Missing class: org/codehaus/janino/InternalCompilerException-->
+
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>commons-compiler</artifactId>
+            <version>3.0.8</version>
+        </dependency>
+
+
+    </dependencies>
+
+</project>
