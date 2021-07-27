@@ -34,8 +34,10 @@ the [sbt-idea-plugin](https://github.com/JetBrains/sbt-idea-plugin) readme
 
 RatCheese
 Rat and Cheese problem statement
+--------------------------------
 
 Assignment
+-----------
 As discussed i am sending the assignment. You should upload the solution as a github repo as far as possible.
 
 Your code should accept input from the user.
